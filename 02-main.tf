@@ -23,7 +23,8 @@ module "network" {
   }
 }
 #>>>
-#NETWORK-VARIABLE MAP
+
+#NETWORK-VARIABLE MAP >>> Links to the Tf vars sheet
 variable "network-det" { #When you us nested objects within a variable, to call upon your selected object, 
   type = object({ #you must use the dot notation .
     name                = string
@@ -45,7 +46,7 @@ variable "network-det" { #When you us nested objects within a variable, to call 
 
   })
 }
-#>>>
+#>>>>>-------------------------------------------------------------------------
 
 /*COMPUTE*/
 
@@ -80,7 +81,7 @@ module "compute" {
 }
 #>>>
 
-#COMPUTE-VARIABLE MAP
+#COMPUTE-VARIABLE MAP >>> Links to the Tf vars sheet
 variable "region_1_vm_detail" {
   type = object({
     name                = string

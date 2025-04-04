@@ -56,7 +56,7 @@ resource "google_compute_instance" "vm_instance_2" {
 }
 #>>>
 
-#>>> WEB SERVER INSTANCE
+#>>> WEB SERVER INSTANCE SUBNET 3 
 resource "google_compute_instance" "vm_instance_3" {
   name         = var.region_3_vm.name
   machine_type = var.region_3_vm.machine_type
@@ -81,7 +81,7 @@ resource "google_compute_instance" "vm_instance_3" {
     email  = var.region_3_vm.service
     scopes = ["https://www.googleapis.com/auth/devstorage.read_only", "https://www.googleapis.com/auth/logging.write", "https://www.googleapis.com/auth/monitoring.write", "https://www.googleapis.com/auth/service.management.readonly", "https://www.googleapis.com/auth/servicecontrol", "https://www.googleapis.com/auth/trace.append"]
   }
-  tags = ["http-for-demons"]
+  tags = ["http-for-demons", "allow-iap"]
   
 }
 #>>>

@@ -17,7 +17,7 @@ network-det = {
     region_3            = "europe-north2"
     sec_3               = "hushallsost"
 }
-#>>>
+#>>>>>-------------------------------------------------------------------------
 
 #VMS
 region_1_vm_detail = {
@@ -28,6 +28,7 @@ region_1_vm_detail = {
     subnetwork   = "projects/pooper-scooper/regions/europe-west6/subnetworks/kaer-seren-swiss"      
     service      = "876288284083-compute@developer.gserviceaccount.com"    
 }
+#>>>---------------------------------------------------------------------------
 
 region_2_vm_detail = {
     name         = "witcher-enzo"
@@ -37,6 +38,7 @@ region_2_vm_detail = {
     subnetwork   = "projects/pooper-scooper/regions/europe-west12/subnetworks/kaer-seren-italiano"      
     service      = "876288284083-compute@developer.gserviceaccount.com"    
 }
+#>>>---------------------------------------------------------------------------
 
 region_3_vm_detail = {
     name         = "witcher-gustavus-adolphus"
@@ -46,4 +48,4 @@ region_3_vm_detail = {
     subnetwork   = "projects/pooper-scooper/regions/europe-north2/subnetworks/kaer-seren-norde"      
     service      = "876288284083-compute@developer.gserviceaccount.com"   
 }
-
+#>>>---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 /*NAT-GATEWAY-CONFIG*/
 
-#Cloud-Router
+# Cloud-Router-Network-2
 resource "google_compute_router" "via-cambria" {
   name    = "path-finder"
   region  = var.network-det.region_2
@@ -8,7 +8,7 @@ resource "google_compute_router" "via-cambria" {
   depends_on = [module.network]
 }
 #>>>
-#NAT-Gateway-Attatchment
+#NAT-Gateway-Attatchment-Network-2
 resource "google_compute_router_nat" "nat-transit" {
   name                               = "highliner-1"
   router                             = google_compute_router.via-cambria.name
@@ -19,8 +19,9 @@ resource "google_compute_router_nat" "nat-transit" {
  Allows NAT access for all resources without having to redfine protocals in case of Scaling or major infa changes.
 */ depends_on = [module.network]
 }
-#>>>
-#Cloud-Router
+#>>>>>-------------------------------------------------------------------------
+
+#Cloud-Router-Network-3
 resource "google_compute_router" "via-cambria-2" {
   name    = "path-finder-2"
   region  = var.network-det.region_3
@@ -28,7 +29,7 @@ resource "google_compute_router" "via-cambria-2" {
   depends_on = [module.network]
 }
 #>>>
-#NAT-Gateway-Attatchment
+#NAT-Gateway-Attatchment-Network-3
 resource "google_compute_router_nat" "nat-transit-2" {
   name                               = "highliner-2"
   router                             = google_compute_router.via-cambria-2.name
